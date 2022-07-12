@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+   name: my-app-replicaset
+
+spec:
+   template:
+      metadata:
+         name: first-pod-dec-replicas
+         labels:
+            app: my-app
+            type: rest-api
+
+      spec:
+         containers:
+            - name: simple-api
+              image: shadidevsecops/simple-api:1.0
+   replicas: 3
+   selector:
+      matchLabels:
+         app: my-app
+         type: rest-api

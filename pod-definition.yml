@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: first-pod-dec
+  lable:
+     app: my-app
+     type: rest-api
+spec:
+  containers:
+   - name: simple-pod
+     image: shadidevsecops/simple-api:1.0
