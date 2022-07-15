@@ -1,12 +1,12 @@
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
 metadata:
-   name: my-app-replicaset
+   name: my-app-deployment
 
 spec:
    template:
       metadata:
-         name: first-pod-dec-replicas
+         name: first-pod-dec-deployment
          labels:
             app: my-app
             type: rest-api
