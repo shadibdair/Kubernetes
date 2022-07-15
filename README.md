@@ -125,9 +125,9 @@ spec:
  - kubectl rollout history deployment/my-app-deployment (To see the changes I did. To can roll back to previous version)
  - kubectl create -f deployment-def.yml --record (To record the command when I type rollout)
  - kubectl apply -f deployment-def.yml (If I want to update the version to the new one)
- <img src="Desktop/ChangeTheCode-Deployment.png" />
+<img src="ChangeTheCode-Deployment.png" />
  - kubectl rollout undo deployment/my-app-deployment --to-revision 1
-
+<img src="AfterRollout-ToPreviousVersion.png" />
 
 ---------------------------------------------------------------
 How to edit code and push the new version to DockerHub:
