@@ -14,7 +14,7 @@ spec:
       spec:
          containers:
             - name: simple-api
-              image: shadidevsecops/simple-api:1.0
+              image: shadidevsecops/simple-api:2.0
    replicas: 5
    selector:
       matchLabels:
