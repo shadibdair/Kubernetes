@@ -49,16 +49,18 @@ metadata:
 spec:
    template:
       metadata:
-         name: first-pod-dec-deployment
+         name: pod-deployment
          labels:
             app: my-app
             type: rest-api
 
       spec:
          containers:
-            - name: simple-api
+            - name: backend-api
               image: shadidevsecops/simple-api:2.0
-   replicas: 5
+              ports:
+              - containerPort: 10253
+   replicas: 1
    selector:
       matchLabels:
          app: my-app
