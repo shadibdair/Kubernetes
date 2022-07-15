@@ -1,5 +1,5 @@
 # Kubernetes
-## Practice K8S
+### Practice K8S
 
 Create a pod: Imperative way
  - kubectl run first-pod --image=shadidevsecops/simple-api:1.0 --restart=Never
