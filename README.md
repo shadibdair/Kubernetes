@@ -20,6 +20,7 @@ Get inside the pod: (-it: run terminal inside pod | i: input)
 --------------------------------------------------------------
 Create pod with Declarative way:
 
+```
 # that talked to the master
 apiVersion: v1
 
@@ -37,6 +38,7 @@ spec:
       - name: simple-pod
         image: shadidevsecops/simple-api:1.0
         
+```
 
 To create the pod declarative way: (-f: file yaml)
  - kubectl create -f pod-definition.yml
@@ -47,6 +49,7 @@ What is replicasets:
 Selectors: 
 - allows us to select Kubernetes resources based on the value of labels and resource fields assigned to a group of pods or nodes
 
+```
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
@@ -69,7 +72,7 @@ spec:
       matchLabels:
          app: my-app
          type: rest-api
-
+```
 
 Get the replicasets:
  - kubectl get replicasets
@@ -88,6 +91,7 @@ Scale - Decleartive (change inside the code YAML file)
 -----------------------------------------------------------------
 - Deployment -
 
+```
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
@@ -110,7 +114,7 @@ spec:
       matchLabels:
          app: my-app
          type: rest-api
-
+```
 
 - Rolling update - one at the time : will change one pod not all the pods
 - Rolling back - one at the time - when we found the new version have issue
@@ -121,7 +125,7 @@ spec:
  - kubectl rollout history deployment/my-app-deployment (To see the changes I did. To can roll back to previous version)
  - kubectl create -f deployment-def.yml --record (To record the command when I type rollout)
  - kubectl apply -f deployment-def.yml (If I want to update the version to the new one)
- ** Add screenshot new deployment
+ <img src="Desktop/ChangeTheCode-Deployment.png" />
  - kubectl rollout undo deployment/my-app-deployment --to-revision 1
 
 
