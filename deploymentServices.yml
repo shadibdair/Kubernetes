@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: db-deployment
+   labels:
+      app: myapp
+      type: database
+
+spec:
+   template:
+      metadata:
+         name: db-pod
+         labels:
+            app: myapp
+            type: mongo-db
+
+      spec:
+         containers:
+            - name: mongodb
+              image: mongo:latest
+              ports:
+                - containerPort: 27017
+   replicas: 1
+   selector:
+      matchLabels:
+         app: myapp
+         type: mongo-db
+
+---
+apiVersion: v1
+kind: Service
+metadara:
+   name: mongo
+spec:
+   type: ClusterIP
+   ports:
+     - targetPort: 27017
+       port: 80
+   selector:
+      app: myapp
+      type: mongo-db
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: my-app-deployment
+
+spec:
+   template:
+      metadata:
+         name: first-pod-dec-deployment
+         labels:
+            app: my-app
+            type: rest-api
+
+      spec:
+         containers:
+            - name: simple-api
+              image: shadidevsecops/simple-api:2.0
+   replicas: 5
+   selector:
+      matchLabels:
+         app: my-app
+         type: rest-api
