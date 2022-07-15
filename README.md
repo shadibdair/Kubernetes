@@ -139,3 +139,10 @@ How to edit code and push the new version to DockerHub:
 
 * Need to create a script for this step: to automated the process. This called CI/CD (DevOps responsibility)
 ----------------------------------------------------------------
+Services:
+ - ClusterIP: Responsible the communication between the pods inside the K8S cluster.
+ - 
+
+Commands:
+Give us more info etc.. IP.
+ - kubectl get pods -o wide
