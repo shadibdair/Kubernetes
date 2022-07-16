@@ -18,7 +18,7 @@ Get inside the pod: (-it: run terminal inside pod | i: input)
 
 
 --------------------------------------------------------------
-Create pod with Declarative way:
+### Create pod with Declarative way:
 
 ```
 # that talked to the master
@@ -43,7 +43,7 @@ spec:
 To create the pod declarative way: (-f: file yaml)
  - kubectl create -f pod-definition.yml
 -----------------------------------------------------------------
-What is replicasets:
+### What is replicasets:
  - That ensures there is always a stable set of running pods for a specific workload
 
 Selectors: 
