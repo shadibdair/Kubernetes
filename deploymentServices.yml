@@ -61,7 +61,7 @@ spec:
             - name: backend-api
               image: shadidevsecops/simple-api:2.0
               ports:
-              - containerPort: 10253
+              - containerPort: 80
    replicas: 1
    selector:
       matchLabels:
@@ -75,7 +75,7 @@ metadata:
 spec:
    type: NodePort
    ports:
-     - targetPort: 10253
+     - targetPort: 80
        port: 81
        nodePort: 30007
    selector:
