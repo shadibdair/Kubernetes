@@ -65,3 +65,17 @@ spec:
       matchLabels:
          app: my-app
          type: rest-api
+---
+apiVersion: v1
+kind: Service
+metadata:
+   name: api-service
+spec:
+   type: NodePort
+   ports:
+     - targetPort: 10253
+       port: 80
+       nodePort: 30005
+   selector:
+      app: myapp
+      type: rest-api
