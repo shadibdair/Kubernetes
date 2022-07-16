@@ -142,6 +142,9 @@ How to edit code and push the new version to DockerHub:
 ### Services:
  - ClusterIP: Responsible the communication between the pods inside the K8S cluster.
  - NodePort: (External access) Accessible from the Internet - users can access.
+NodePort: External IP.
+<img src="NodePort-externalIP.png" />
+
 
 Commands:
 Give us more info etc.. IP.
