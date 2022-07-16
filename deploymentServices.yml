@@ -45,6 +45,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
    name: my-app-deployment
+   lables:
+      app: my-app
 
 spec:
    template:
@@ -77,5 +79,5 @@ spec:
        port: 80
        nodePort: 30005
    selector:
-      app: myapp
+      app: my-app
       type: rest-api
