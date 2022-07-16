@@ -79,17 +79,17 @@ Get the replicasets:
 Delete the replicasets:
  - kubectl delete rs "name-of-the-replicaset"
 ---------------------------------------------------------------
-To see dashboard of the pods, cluster ... visualation.
+### To see dashboard of the pods, cluster ... visualation.
  - minikube dashboard
 ----------------------------------------------------------------
-Scale UP/DOWN - Imperative way:
+### Scale UP/DOWN - Imperative way:
  - kubectl scale --replicas=6 replicaset "name-of-the-appReplicas"
 
 Scale - Decleartive (change inside the code YAML file)
  - kubectl replace -f replica-def.yml
  
 -----------------------------------------------------------------
-- Deployment -
+### Deployment -
 
 ```
 apiVersion: apps/v1
@@ -139,7 +139,7 @@ How to edit code and push the new version to DockerHub:
 
 * Need to create a script for this step: to automated the process. This called CI/CD (DevOps responsibility)
 ----------------------------------------------------------------
-Services:
+### Services:
  - ClusterIP: Responsible the communication between the pods inside the K8S cluster.
  - NodePort: (External access)  
 
