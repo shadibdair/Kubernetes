@@ -146,3 +146,5 @@ Services:
 Commands:
 Give us more info etc.. IP.
  - kubectl get pods -o wide
+To see the services I have
+ - kubectl get svc
