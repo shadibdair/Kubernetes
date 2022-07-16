@@ -141,7 +141,7 @@ How to edit code and push the new version to DockerHub:
 ----------------------------------------------------------------
 Services:
  - ClusterIP: Responsible the communication between the pods inside the K8S cluster.
- - 
+ - NodePort: (External access)  
 
 Commands:
 Give us more info etc.. IP.
