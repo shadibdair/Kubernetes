@@ -76,8 +76,8 @@ spec:
    type: NodePort
    ports:
      - targetPort: 10253
-       port: 80
-       nodePort: 30005
+       port: 81
+       nodePort: 30007
    selector:
       app: my-app
       type: rest-api
